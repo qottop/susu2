@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>susu</title>
+  <style>
+    body {
+      background-color: #e3f2fd;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      color: #0277bd;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-bottom: 50px;
+      color: #01579b;
+    }
+
+    .message {
+      margin: 20px auto;
+      width: 300px;
+      height: 200px;
+      padding: 0;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .message img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .note-box {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border: 2px dashed #01579b;
+      border-radius: 15px;
+      color: #0277bd;
+      font-size: 20px;
+      width: fit-content;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    }
+
+    .falling-text {
+      position: absolute;
+      top: 0;
+      font-size: 40px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bold;
+      animation: fallText 5s linear infinite;
+      opacity: 0;
+      z-index: 998;
+      color: #0288d1;
+    }
+
+    @keyframes fallText {
+      0% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        transform: translateY(100vh);
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(100vh);
+      }
+    }
+
+    //.falling-text1 { left: 5%; animation-delay: 0s; }
+    
+    .falling-text3 { left: 19%; animation-delay: 0s; }
+    
+    .falling-text5 { left: 33%; animation-delay: 0s; }
+    
+    .falling-text7 { left: 47%; animation-delay: 0s; }
+    
+    .falling-text9 { left: 61%; animation-delay: 0s; }
+    
+    .falling-text11 { left: 75%; animation-delay: 0s; }
+    
+    .falling-text13 { left: 89%; animation-delay: 0s; }
+
+    .cute-button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      font-size: 18px;
+      background-color: #81d4fa;
+      border: none;
+      border-radius: 30px;
+      color: #01579b;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .cute-button:hover {
+      background-color: #4fc3f7;
+    }
+
+    .message-text {
+      margin-top: 30px;
+      font-size: 22px;
+      color: #d81b60;
+      padding: 15px 25px;
+      background-color: #fff3e0;
+      border: 2px solid #ffab91;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: inline-block;
+      animation: popUp 0.5s ease-out;
+    }
+
+    @keyframes popUp {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ให้กำลังใจ888</h1>
+
+  <div class="message">
+    <img src="https://i.imgur.com/9TSqdR5.png" alt="cute bear">
+  </div>
+
+  <div class="note-box">
+    สนุกม้ายจ้ะ <br>
+    หมีท้อปมาเป็นกำลังใจให้565555 <br>
+    susu na keng makk
+  </div>
+
+  <!-- ปุ่มหรือข้อความ -->
+  <div id="buttonContainer">
+    <button class="cute-button" onclick="replaceWithMessage()">ลองกดอันนี้</button>
+  </div>
+
+  <!-- ข้อความร่วง -->
+  <div class="falling-text falling-text1">เก่งมาก</div>
+  <div class="falling-text falling-text2">เก่งมาก</div>
+  <div class="falling-text falling-text3">เก่งมาก</div>
+  <div class="falling-text falling-text4">เก่งมาก</div>
+  <div class="falling-text falling-text5">เก่งมาก</div>
+  <div class="falling-text falling-text6">เก่งมาก</div>
+  <div class="falling-text falling-text7">เก่งมาก</div>
+  <div class="falling-text falling-text8">เก่งมาก</div>
+  <div class="falling-text falling-text9">เก่งมาก</div>
+  <div class="falling-text falling-text10">เก่งมาก</div>
+  <div class="falling-text falling-text11">เก่งมาก</div>
+  <div class="falling-text falling-text12">เก่งมาก</div>
+  <div class="falling-text falling-text13">เก่งมาก</div>
+
+  <script>
+    function replaceWithMessage() {
+      const container = document.getElementById('buttonContainer');
+      container.innerHTML = '<div class="message-text">ต่างหูข้างนึงกำลังไปklab</div>';
+    }
+  </script>
+
+</body>
+</html>
